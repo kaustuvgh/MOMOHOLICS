@@ -161,7 +161,7 @@ svg {
 
 .main .intro {
   display: grid;
-  justify-content: center;
+  justify-content: right;
   margin: auto;
   height: 100%;
 }
@@ -171,9 +171,14 @@ svg {
   padding: 0;
 }
 .main .home-img img {
-  max-height: 47.7%;
+  height: 30%;
   width: 50;
   object-fit: cover;
+}
+
+.home-img img{
+  float: right;
+  margin-left: 20px;
 }
 
 .container {
