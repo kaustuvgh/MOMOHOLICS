@@ -46,12 +46,14 @@ body {
       #f4c0b3 100%); */
   background-repeat: no-repeat;
   font-family: "poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
   top: 0;
   position: fixed;
   width: 100%;
+  margin: auto;
 }
 
 #navbar {
@@ -176,13 +178,11 @@ svg {
 }
 
 .main .home-img .home-momo {
-  height: 30%;
-  width: 50;
   background: url('/image/momomo.jpg') no-repeat center center/cover;
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 657px;
+  height: auto;
   width: 100%;
   z-index: -1;
   opacity: 0.7;
@@ -192,8 +192,7 @@ svg {
 .container {
   background-color: #15556a;
   background-image: linear-gradient(180deg, #15556a 0%, #2183a2 100%);
-  padding: 15px 9%;
-  padding-bottom: 100px;
+  padding: 15px 20px;
 }
 
 .container .heading {
