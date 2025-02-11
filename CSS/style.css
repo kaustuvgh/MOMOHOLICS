@@ -36,24 +36,22 @@ html {
   padding: 0;
   scroll-behavior: smooth;
 }
-
 body {
-
-  /* background-color: #085467; */
-  /* background-image: linear-gradient(180deg,
-      #085467 0%,
-      #afa7bb 50%,
-      #f4c0b3 100%); */
+  background-color: #085467;
+  background-image: linear-gradient(
+    180deg,
+    #085467 0%,
+    #afa7bb 50%,
+    #f4c0b3 100%
+  );
   background-repeat: no-repeat;
   font-family: "poppins", sans-serif;
-  overflow-x: hidden;
 }
 
 nav {
   top: 0;
   position: fixed;
-  width: 100%;
-  margin: auto;
+  min-width: 100%;
 }
 
 #navbar {
@@ -63,8 +61,8 @@ nav {
   font-family: "poppins", sans-serif;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 #121331;
-  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 0 solid rgba(255, 255, 255, 0.18);
   z-index: 1000;
 }
@@ -130,11 +128,16 @@ a {
   border-radius: 5px;
 }
 
+
+.burger{
+  display: none;
+}
+
 .ord {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 12px;
@@ -142,10 +145,10 @@ a {
 }
 
 .ord:hover {
-  background: #00000033;
+  background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
 }
 
@@ -161,38 +164,26 @@ svg {
   height: 100%;
 }
 
-.main .intro {
-  display: grid;
-  justify-content: center;
-  margin: auto;
-  /* height: 100%; */
-  background: url('/image/momomo.jpg') no-repeat center center/cover;
-
-}
-
-.main .home-img {
-  margin: 0;
-  padding: 250px;
-  height: 100%;
-  width: 100%;
-}
-
-.main .home-img .home-momo {
-  background: url('image/momomo.jpg') no-repeat center center/cover;
+.main:before{
+  content: " ";
+  background: url('momomo.jpg') no-repeat center center/cover;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  height: auto;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: -1;
-  opacity: 0.7;
-  margin-left: 20px;
+  /* margin: auto; */
+  height: 50%;
+  z-index: 1;
+  opacity: 0.4;
 }
 
 .container {
-  background-color: #15556a;
-  background-image: linear-gradient(180deg, #15556a 0%, #2183a2 100%);
-  padding: 15px 20px;
+  margin-top: 40rem;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+  padding: 15px 9%;
+  padding-bottom: 100px;
+  display: block;
 }
 
 .container .heading {
@@ -212,8 +203,8 @@ svg {
 .container .box-container .box {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
@@ -258,8 +249,8 @@ svg {
 .container .box-container .box:hover {
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transform: scale(1.03);
@@ -285,26 +276,17 @@ svg {
 
 /* modals */
 .modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 100000;
-  /* Sit on top */
-  padding-top: 70px;
-  /* Location of the box */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100000; /* Sit on top */
+  padding-top: 70px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   font-family: "poppins", sans-serif;
 }
 
@@ -312,8 +294,8 @@ svg {
 .modal-content {
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background-blend-mode: overlay, hard-light, normal;
@@ -421,4 +403,45 @@ select {
   border: 2px solid #999;
   border-radius: 5px;
   transition: 0.2s all linear;
+}
+
+.buttons{
+  padding: 5px;
+}
+
+@media (max-width: 1400px) {
+  #navbar li{
+    font-size: 2px;
+    padding: -10px;
+  }
+
+  #navbar{
+    position: relative;
+  }
+  .ord{
+    margin: -2px;
+  }
+}
+
+@media (max-width: 1370px) {
+  #navbar ul li a{
+    display: none;
+  }
+
+  .burger{
+    display: block;
+  }
+  .ord{
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+#hsvg svg{
+  display: none;
+}
+
+.burger{
+  padding: 20px;
+}
 }
