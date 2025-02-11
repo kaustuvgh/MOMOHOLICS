@@ -36,14 +36,14 @@ html {
   padding: 0;
   scroll-behavior: smooth;
 }
+
 body {
-  background-color: #085467;
-  background-image: linear-gradient(
-    180deg,
-    #085467 0%,
-    #afa7bb 50%,
-    #f4c0b3 100%
-  );
+
+  /* background-color: #085467; */
+  /* background-image: linear-gradient(180deg,
+      #085467 0%,
+      #afa7bb 50%,
+      #f4c0b3 100%); */
   background-repeat: no-repeat;
   font-family: "poppins", sans-serif;
 }
@@ -61,8 +61,8 @@ nav {
   font-family: "poppins", sans-serif;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 #121331;
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border: 0 solid rgba(255, 255, 255, 0.18);
   z-index: 1000;
 }
@@ -129,10 +129,10 @@ a {
 }
 
 .ord {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 12px;
@@ -140,10 +140,10 @@ a {
 }
 
 .ord:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: #00000033;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-radius: 10px;
 }
 
@@ -161,27 +161,37 @@ svg {
 
 .main .intro {
   display: grid;
-  justify-content: right;
+  justify-content: center;
   margin: auto;
-  height: 100%;
+  /* height: 100%; */
+  background: url('/image/momomo.jpg') no-repeat center center/cover;
+
 }
 
 .main .home-img {
   margin: 0;
-  padding: 0;
+  padding: 250px;
+  height: 100%;
+  width: 100%;
 }
-.main .home-img img {
+
+.main .home-img .home-momo {
   height: 30%;
   width: 50;
-  object-fit: cover;
-  float: right;
+  background: url('/image/momomo.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 657px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
   margin-left: 20px;
 }
 
 .container {
-  background-color: #0093e9;
-  background-image: linear-gradient(180deg, #0093e9 0%, #80d0c7 100%);
-
+  background-color: #15556a;
+  background-image: linear-gradient(180deg, #15556a 0%, #2183a2 100%);
   padding: 15px 9%;
   padding-bottom: 100px;
 }
@@ -203,8 +213,8 @@ svg {
 .container .box-container .box {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
@@ -249,8 +259,8 @@ svg {
 .container .box-container .box:hover {
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transform: scale(1.03);
@@ -276,17 +286,26 @@ svg {
 
 /* modals */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 100000; /* Sit on top */
-  padding-top: 70px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100000;
+  /* Sit on top */
+  padding-top: 70px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
   font-family: "poppins", sans-serif;
 }
 
@@ -294,8 +313,8 @@ svg {
 .modal-content {
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background-blend-mode: overlay, hard-light, normal;
