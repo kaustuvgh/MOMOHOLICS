@@ -4,22 +4,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.main{
-    width: 100%;
-    height: 100vh;
-    position: relative;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* width: 100%;
+    height: auto; 
+    position: relative; */
     overflow: hidden;
     background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    z-index: -1;
 }
 
 
 
-nav{
+nav {
     width: 100%;
     position: sticky;
     margin: 0 auto;
@@ -27,82 +32,107 @@ nav{
     z-index: 2;
     display: flex;
     align-items: center;
-    background: rgba( 255, 255, 255, 0.1 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.logo{
+.logo {
     flex-basis: 20%;
     display: flex;
 }
 
-.logo text{
+.logo text {
     font-family: "Truculenta", sans-serif;
     font-size: 30px;
     color: white;
 }
 
-    #b{
-        height: 15%;
-        width: 15%;
-        padding: 0;
-        margin-left: 20px;
-    }
+#b {
+    height: 15%;
+    width: 15%;
+    padding: 0;
+    margin-left: 20px;
+}
 
-    .links{
-        flex: 1;
-        text-align: right;
-    }
-    
-    .links ul li{
+.links {
+    flex: 1;
+    text-align: right;
+}
+
+.links ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
 }
 
-.links ul li a{
+.links ul li a {
     color: white;
     font-family: "poppins", sans-serif;
     text-decoration: none;
 }
 
-.links ul li a .main-cart{
+.links ul li a .main-cart {
     display: flex;
 }
 
-#i-cart{
+#i-cart {
     height: 8%;
     width: 8%;
     margin-left: 10px;
     margin-bottom: -7px;
 }
 
-.info{
-    height: 50%;
-    width: 100%;
-}
-
-.info .bg{
-    background: url("/image/momomo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    opacity: 0.9;
-    font-family: "poppins", sans-serif;
-display: flex;
-justify-content: center;
-backface-visibility: visible;
-color: white;
-
-}
-
-.info .bg .slogan{
+#home {
     display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 578px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home:before {
+    content: "";
+    background: url('/image/momomo.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 657px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Bree Serif", serif;
+}
+
+.btn {
+    padding: 5px 20px;
+    color: white;
+    border: 2px solid white;
+    background-color: #465d6d;
+    margin: 14px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.info .bg .slogan h1,
+p,
+button {
     align-items: center;
     justify-content: center;
     padding: auto;
@@ -112,32 +142,13 @@ color: white;
 }
 
 @keyframes appearance {
-    0%{
+    0% {
         transform: translateX(-200%);
         opacity: 0.1;
         color: black;
     }
-    100%{
-transform: translate(0);
+
+    100% {
+        transform: translate(0);
     }
-}
-
-.serve{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.deli, .deals{
-    padding: 20px;
-    border-radius: 150px;
-    background: #e0e0e0;
-    box-shadow:  14px 14px 28px #bebebe,
-                 -14px -14px 28px #ffffff;
-
-}
-
-.deli, .deals .delisvg, .dealsvg{
-height: 5%;
-width: 5%;
 }
