@@ -133,7 +133,7 @@ nav {
 
 #home:before {
   content: "";
-  background: url("/image/momomomo.jpg") no-repeat center center/cover;
+  background: url(".../image/momomomo.jpg") no-repeat center center/cover;
   position: absolute;
   top: 0px;
   left: 0px;
